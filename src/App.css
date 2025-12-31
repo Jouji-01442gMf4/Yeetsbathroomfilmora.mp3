@@ -22,38 +22,7 @@ body {
 }
 
 /* ===================== BACKGROUND ===================== */
-.bg-neural-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 50px 50px;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-}
 
-.bg-neural-grid::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%,
-      rgba(253, 253, 253, 0.08),
-      transparent 70%);
-  animation: pulseGlow 8s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 0.7;
-  }
-}
 
 /* ===================== NAVBAR ===================== */
 .navbar {
@@ -176,6 +145,7 @@ body {
 /* gradient ONLY on text, not emoji */
 .hero-name span:not(.wave-emoji) {
   background: linear-gradient(135deg, #fff 40%, var(--colour-main));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -197,7 +167,7 @@ body {
 }
 
 .hero-card:hover .wave-emoji {
-  animation: wave 1s infinite;
+  animation: wave 1s;
 }
 
 @keyframes wave {
