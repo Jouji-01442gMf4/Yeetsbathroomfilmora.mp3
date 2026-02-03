@@ -1,6 +1,10 @@
 import React from "react";
 import "./App.css";
 import { Globe, Code, FileBadge, Mail, ExternalLink, Cpu, Database, PhoneCall } from "lucide-react";
+import HexBackground from "./HexBackground.jsx";
+
+
+
 
 const HtmlIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24">
@@ -60,17 +64,11 @@ const GoIcon = () => (
 
 
 
+
 function App() {
   return (
     <div className="portfolio-container">
-  {/* Modern Neural Grid Background or sm lyk dat */}
-  <div className="bg-neural-grid">
-    <div className="grid-overlay"></div>
-    <div className="moving-line"></div>
-    <div className="moving-line"></div>
-  </div>
-
-
+      <HexBackground />
       <main className="bento-grid">
         {/* TOP LEFT */}
         <div className="hero-card animate-fadeIn">
@@ -199,7 +197,7 @@ function App() {
       </main>
 
       <footer className="contact-bar" id="Contact">
-        <div className="contact-item"><Mail size={20} /> <span>jou.ji357@gmail.com.com</span></div>
+        <div className="contact-item"><Mail size={20} /> <span>jou.ji357@gmail.com</span></div>
         <div className="contact-item"><PhoneCall size={20} /> <span>Mobile / +31 0620969778</span></div>
       </footer>
     </div>
